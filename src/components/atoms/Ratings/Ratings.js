@@ -24,7 +24,6 @@ const Ratings = ({ value, type, total }: Props) => {
   const count = Math.floor(value);
   const halfCount = count % value > 0;
   const remainingCount = count < _total ? halfCount ? _total - count - 1 : _total - count : 0;
-  console.log(count, _total, remainingCount, typeof remainingCount)
   const isSelfType = type === "self";
   return (
     <>

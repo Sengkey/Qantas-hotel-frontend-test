@@ -11,7 +11,7 @@ To run my app
 yarn && yarn start
 ```
 # Frameworks
-I use a fresh install [Create-React-App](https://create-react-app.dev/) as a base template.
+I used a fresh install [Create-React-App](https://create-react-app.dev/) as a base template.
 
 # File structures
 
@@ -30,7 +30,12 @@ I added SASS library to improve styling experience. I also used the React [modul
 # Price sorting
 For the price sorting functionality, I used an external library called [lodash/orderBy](https://lodash.com/docs/4.17.15#orderBy) to perform nested object values comparison.
 
-I hope you capture my approach in this small code challenge.
+# Future improvement
+I am happy to adapt my code to use Typescript instead of PropTypes.
+
+I have tested my app on Google Chrome, Firefox and Safari browser.
+
+I hope you can capture my approach and thinking method in this small code challenge and can meet your standard.
 
 Many thanks,
 Reg

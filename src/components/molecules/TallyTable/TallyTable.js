@@ -26,7 +26,6 @@ export default class TallyTable extends React.Component<Props, State> {
   }
 
   handleSelect = (e) => {
-    console.log(e)
     this.setState({ sortType: sortPriceOptions[e].value });
   };
 
@@ -131,7 +130,7 @@ export default class TallyTable extends React.Component<Props, State> {
 
                     </div>
                   </div>
-                  
+
                 </article>
               );
             })}
