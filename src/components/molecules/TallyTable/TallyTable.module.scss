@@ -28,8 +28,6 @@ $BrandColor: #e00e00; // Qantas red
 
 .Body {
   article {
-    display: flex;
-
     &:last-child {
       .ContentBox {
         border-bottom-width: 1px;
@@ -48,7 +46,7 @@ $BrandColor: #e00e00; // Qantas red
   padding: 0.5rem 0;
 
   display: flex;
-  width: 100%;
+  min-height: 124px;
 
   flex-direction: column;
 
@@ -92,14 +90,14 @@ $BrandColor: #e00e00; // Qantas red
   h3 {
     margin: 0;
     font-weight: normal;
+    @media screen and (min-width: 600px) {
+      display: flex;
+    }
     span {
-      @media screen and (min-width: 600px) {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: inline-block;
-        max-width: 70%;
-      }
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
     }
   }
 
@@ -111,11 +109,12 @@ $BrandColor: #e00e00; // Qantas red
 }
 
 .Image {
-  width: 145px;
+  min-width: 161px;
   min-height: 125px;
-  margin-right: 16px;
   position: relative;
   padding: 0.5rem 0;
+  display: block;
+  float: left;
 
   img {
     display: block;
@@ -152,7 +151,14 @@ $BrandColor: #e00e00; // Qantas red
 
 .Save {
   color: $BrandColor;
-  min-height: 20px;
+  @media screen and (min-width: 600px) {
+    min-height: 20px;
+  }
+}
+
+.RoomName,
+.Cancellation {
+  font-size: 13px;
 }
 
 .RoomName a {
@@ -165,10 +171,7 @@ $BrandColor: #e00e00; // Qantas red
 
 .Cancellation {
   color: green;
-  min-height: 20px;
-}
-
-.RoomName,
-.Cancellation {
-  font-size: 13px;
+  @media screen and (min-width: 600px) {
+    min-height: 20px;
+  }
 }

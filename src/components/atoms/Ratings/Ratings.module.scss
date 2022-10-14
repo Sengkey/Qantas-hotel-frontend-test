@@ -1,4 +1,5 @@
 .Container {
+  white-space: nowrap;
   @media screen and (min-width: 600px) {
     padding: 0 0.25rem;
     display: inline-block;
