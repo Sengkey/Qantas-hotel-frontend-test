@@ -65,6 +65,9 @@ $BrandColor: #e00e00; // Qantas red
   flex-direction: column;
   justify-content: space-between;
   @media screen and (min-width: 600px) {
+    width: 70%;
+  }
+  @media screen and (min-width: 768px) {
     width: 75%;
   }
 }
@@ -78,25 +81,26 @@ $BrandColor: #e00e00; // Qantas red
   justify-content: flex-end;
 
   @media screen and (min-width: 600px) {
+    width: 30%;
+  }
+  @media screen and (min-width: 768px) {
     width: 25%;
   }
 }
 
 .ContentTitle {
-
   h3 {
     margin: 0;
     font-weight: normal;
-    
     span {
       @media screen and (min-width: 600px) {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 60%;
+        display: inline-block;
+        max-width: 70%;
       }
     }
-    
   }
 
 
