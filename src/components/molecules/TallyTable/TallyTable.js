@@ -34,7 +34,7 @@ export default class TallyTable extends React.Component<Props, State> {
     
     const { results } = data;
     
-    const sortedData = sortType !== undefined ? orderBy(
+    const sortedData = sortType !== undefined && sortType !== "" ? orderBy(
       results,
       ["offer.displayPrice.amount"],
       [sortType]
