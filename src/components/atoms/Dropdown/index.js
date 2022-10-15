@@ -10,7 +10,7 @@ import style from './Dropdown.module.scss';
 * />
  *
  * @prop {Function} onSelect
- * @prop {mixed} ... All other props will be forwarded to the native DOM button.
+ * @prop {mixed} ... All other props will be forwarded to the native DOM select element.
 
  */
 
