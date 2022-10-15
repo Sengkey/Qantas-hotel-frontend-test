@@ -45,7 +45,7 @@ export default class TallyTable extends React.Component<Props, State> {
         <div className={style.Header}>
           
           <div className={style.ResultText}>
-            <strong>{sortedData.length}</strong> <em>hotels in</em>{" "}
+            <strong>{sortedData.length}</strong> <em>{`${sortedData.length > 1 ? "hotels in":"hotel in"}`}</em>{" "}
             <strong>Sydney</strong>.
           </div>
           
