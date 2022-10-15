@@ -3,7 +3,7 @@ import orderBy from "lodash/orderBy";
 import data from "./data.json";
 import style from "./TallyTable.module.scss";
 import Dropdown from "../../atoms/Dropdown";
-import Ratings from "../../atoms/Ratings/Ratings";
+import Rating from "../../atoms/Rating/Rating";
 
 const sortPriceOptions = [
   { label: "Default", value: "" },
@@ -98,7 +98,7 @@ export default class TallyTable extends React.Component<Props, State> {
                       <div className={style.ContentTitle}>
                         <h3>
                           <span>{title}</span>
-                          {rating !== null && <Ratings value={rating.ratingValue} type={rating.ratingType} />}
+                          {rating !== null && <Rating value={rating.ratingValue} type={rating.ratingType} />}
                         </h3>
                         <p className={style.Address}>
                           {address[0]}, {address[1]}
