@@ -125,7 +125,7 @@ export default class TallyTable extends React.Component<Props, State> {
                         {amount}
                       </div>
                       <p className={style.Save}>
-                        {savings !== null && `Save ${savings.amount}~`}
+                        {savings !== null && `Save $${savings.amount}~`}
                       </p>
 
                     </div>
