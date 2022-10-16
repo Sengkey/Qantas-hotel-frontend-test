@@ -2,14 +2,14 @@ import React from "react";
 import style from "./Rating.module.scss";
 
 /**
-* <Ratings
+* <Rating
 *   value={3.5}
 *   type="self"
 *   total={5}
 * />
  *
  * @prop {value} number rating value
- * @prop {type} number optional icon type
+ * @prop {type} string optional icon type
  * @prop {total} number optional total figure. default is 5
  */
 
@@ -19,7 +19,7 @@ type Props = {
   total?: number
 };
 
-const Ratings = ({ value, type, total }: Props) => {
+const Rating = ({ value, type, total }: Props) => {
   const _total = total !== undefined ? total : 5;
   const count = Math.floor(value);
   const halfCount = count % value > 0;
@@ -120,4 +120,4 @@ const Ratings = ({ value, type, total }: Props) => {
   );
 };
 
-export default Ratings;
+export default Rating;
