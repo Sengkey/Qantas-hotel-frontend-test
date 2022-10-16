@@ -87,7 +87,7 @@ export default class TallyTable extends React.Component<Props, State> {
 
                   <div className={style.Image}>
                     <span className={style.PromoLabel}>{promotion.title}</span>
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" rel="nofollow">
                       <img src={url} alt={caption} />
                     </a>
                   </div>
@@ -105,7 +105,7 @@ export default class TallyTable extends React.Component<Props, State> {
                         </p>
                       </div>
                       <p className={style.RoomName}>
-                        <a href="#" target="_blank">
+                        <a href="#" target="_blank" rel="nofollow">
                           {name}
                         </a>
                       </p>
