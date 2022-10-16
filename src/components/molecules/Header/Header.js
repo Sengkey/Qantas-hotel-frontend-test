@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from "./qantas-logo.png";
 import style from "./Header.module.scss";
 
