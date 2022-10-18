@@ -30,6 +30,7 @@ export default function Dropdown({
 
   const select = (optionIndex) => {
     setDDSelectedIndex(optionIndex);
+    setIsOpen(false);
     onSelect(options[optionIndex].value);
   };
 
