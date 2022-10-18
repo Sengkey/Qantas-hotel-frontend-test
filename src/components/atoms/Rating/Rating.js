@@ -38,7 +38,6 @@ const Rating = ({ value, type, total }) => {
           ))}
           {halfCount && (
             <svg
-              key={"halfCount"}
               className={style.Icon}
               viewBox="0 0 24 24"
               title="starHalf"
@@ -70,7 +69,7 @@ const Rating = ({ value, type, total }) => {
         <div className={style.Container} title={`${value} ratings`}>
           {Array.from(Array(count), (e, i) => (
             <svg
-              key={i}  
+              key={"s"+i}  
               className={style.Icon}
               viewBox="0 0 24 24"
               title="circle"

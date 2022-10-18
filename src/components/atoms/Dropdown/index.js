@@ -10,10 +10,10 @@ import style from './Dropdown.module.scss';
 *   selectedIndex={}
 * />
  *
- * @prop {array} options
- * @prop {Function} itemLabel
- * @prop {Function} onSelect
- * @prop {number} selectedIndex
+ * @prop {array} options dropdown options array objects
+ * @prop {Function} itemLabel displaying variable of selected object
+ * @prop {Function} onSelect callback function to update parent state DOM
+ * @prop {number} selectedIndex displaying selected active index of dropdown
 
  */
 

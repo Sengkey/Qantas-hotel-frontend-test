@@ -1,9 +1,9 @@
 import React from "react";
-import style from "./TallyTable.module.scss";
+import orderBy from "lodash/orderBy";
 import Dropdown from "../../atoms/Dropdown";
 import Rating from "../../atoms/Rating/Rating";
 
-import orderBy from "lodash/orderBy";
+import style from "./TallyTable.module.scss";
 import data from "./data.json";
 
 const sortPriceOptions = [
