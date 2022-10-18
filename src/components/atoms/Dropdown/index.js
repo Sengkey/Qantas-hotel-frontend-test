@@ -11,7 +11,7 @@ import style from './Dropdown.module.scss';
 * />
  *
  * @prop {array} options dropdown options array objects
- * @prop {Function} itemLabel displaying variable of selected object
+ * @prop {Function} itemLabel returning a value of the active object
  * @prop {Function} onSelect callback function to update parent state DOM
  * @prop {number} selectedIndex displaying selected active index of dropdown
 
@@ -61,7 +61,7 @@ export default function Dropdown({
 
 Dropdown.propTypes = {
   options: PropTypes.array,
-  itemLabel: PropTypes.array,
+  itemLabel: PropTypes.func,
   selectedIndex: PropTypes.number,
   onSelect: PropTypes.func
 }
