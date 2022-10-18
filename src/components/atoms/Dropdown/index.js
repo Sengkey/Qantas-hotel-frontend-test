@@ -5,34 +5,35 @@ import style from './Dropdown.module.scss';
 /**
 * <Dropdown
 *   options={ [{label:..., value:...}, {label:..., value:...}] }
-*   itemLabel={(d) => d.label}
 *   onSelect={() => console.log('Select')}
-*   selectedIndex={}
+*   selectedValue={}
 * />
  *
- * @prop {array} options dropdown options array objects
- * @prop {Function} itemLabel returning a value of the active object
- * @prop {Function} onSelect callback function to update parent state DOM
- * @prop {number} selectedIndex displaying selected active index of dropdown
+ * @prop {array} options dropdown options objects array
+ * @prop {Function} onSelect selected function handler 
+ * @prop {mixed} selectedValue displaying selected value
 
  */
 
 export default function Dropdown({
   options,
-  itemLabel,
-  selectedIndex,
+  selectedValue,
   onSelect,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   
   const [ddSelectedIndex, setDDSelectedIndex] = useState(0);
 
+  const selectedIndex = options.map(d => d.value).indexOf(selectedValue);
+
   if(selectedIndex !== ddSelectedIndex) setDDSelectedIndex(selectedIndex);
 
   const select = (optionIndex) => {
     setDDSelectedIndex(optionIndex);
-    onSelect(optionIndex);
+    onSelect(options[optionIndex].value);
   };
+
+  const itemLabel = option => option.label;
 
   return (
     <div
@@ -60,8 +61,12 @@ export default function Dropdown({
 };
 
 Dropdown.propTypes = {
-  options: PropTypes.array,
+  options: PropTypes.array.isRequired,
   itemLabel: PropTypes.func,
-  selectedIndex: PropTypes.number,
+  selectedValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool
+  ]),
   onSelect: PropTypes.func
 }

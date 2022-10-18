@@ -9,15 +9,14 @@ import style from "./Rating.module.scss";
 * />
  *
  * @prop {number} value rating value
- * @prop {string} type optional icon type
- * @prop {number} total optional total figure. default is 5
+ * @prop {string} type an optional conditional icon type e.g. for styling
+ * @prop {number} total an optional define the total number of icons. Default value is 5
  */
 
 const Rating = ({ value, type, total }) => {
-  const _total = total !== undefined ? total : 5;
   const count = Math.floor(value);
   const halfCount = count % value > 0;
-  const remainingCount = count < _total ? halfCount ? _total - count - 1 : _total - count : 0;
+  const remainingCount = count < total ? halfCount ? total - count - 1 : total - count : 0;
   const isSelfType = type === "self";
   return (
     <>
@@ -115,8 +114,12 @@ const Rating = ({ value, type, total }) => {
 
 export default Rating;
 
+Rating.defaultProps = {
+  total: 5
+}
+
 Rating.propTypes = {
-  value: PropTypes.number,
+  value: PropTypes.number.isRequired,
   type: PropTypes.string,
   total: PropTypes.number
 }

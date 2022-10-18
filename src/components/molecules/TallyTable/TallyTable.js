@@ -20,8 +20,8 @@ export default class TallyTable extends React.Component {
     };
   }
 
-  handleSelect = (e) => {
-    this.setState({ sortType: sortPriceOptions[e].value });
+  handleSelect = (value) => {
+    this.setState({ sortType: value });
   };
 
   render() {
@@ -48,11 +48,8 @@ export default class TallyTable extends React.Component {
             <span>Sort by</span>{" "}
             <Dropdown
               options={sortPriceOptions}
-              itemLabel={(d) => d.label}
               onSelect={(e) => this.handleSelect(e)}
-              selectedIndex={sortPriceOptions
-                .map((d) => d.value)
-                .indexOf(sortType)}
+              selectedValue={sortType}
             />
           </div>
 
