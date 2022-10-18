@@ -1,9 +1,10 @@
 import React from "react";
-import orderBy from "lodash/orderBy";
-import data from "./data.json";
 import style from "./TallyTable.module.scss";
 import Dropdown from "../../atoms/Dropdown";
 import Rating from "../../atoms/Rating/Rating";
+
+import orderBy from "lodash/orderBy";
+import data from "./data.json";
 
 const sortPriceOptions = [
   { label: "Default", value: "" },
@@ -11,14 +12,8 @@ const sortPriceOptions = [
   { label: "Price low-high", value: "asc" },
 ];
 
-type Props = {};
-
-type State = {
-  sortType: String,
-};
-
-export default class TallyTable extends React.Component<Props, State> {
-  constructor(props: Props) {
+export default class TallyTable extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
       sortType: undefined,

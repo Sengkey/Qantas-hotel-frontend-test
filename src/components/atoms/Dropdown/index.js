@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import style from './Dropdown.module.scss';
 
 /**
@@ -9,8 +10,10 @@ import style from './Dropdown.module.scss';
 *   selectedIndex={}
 * />
  *
+ * @prop {array} options
+ * @prop {Function} itemLabel
  * @prop {Function} onSelect
- * @prop {mixed} ... All other props will be forwarded to the native DOM select element.
+ * @prop {number} selectedIndex
 
  */
 
@@ -55,3 +58,10 @@ export default function Dropdown({
     </div>
   );
 };
+
+Dropdown.propTypes = {
+  options: PropTypes.array,
+  itemLabel: PropTypes.array,
+  selectedIndex: PropTypes.number,
+  onSelect: PropTypes.func
+}
