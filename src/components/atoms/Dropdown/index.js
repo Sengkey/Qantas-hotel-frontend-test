@@ -11,7 +11,7 @@ import style from './Dropdown.module.scss';
  *
  * @prop {array} options dropdown options objects array
  * @prop {Function} onSelect selected function handler 
- * @prop {mixed} selectedValue displaying selected value
+ * @prop {mixed} selectedValue displaying selected value props
 
  */
 
@@ -62,11 +62,10 @@ export default function Dropdown({
 
 Dropdown.propTypes = {
   options: PropTypes.array.isRequired,
-  itemLabel: PropTypes.func,
   selectedValue: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
     PropTypes.bool
-  ]),
+  ]).isRequired,
   onSelect: PropTypes.func
 }
