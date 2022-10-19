@@ -34,8 +34,6 @@ export default function Dropdown({
     onSelect(options[optionIndex].value);
   };
 
-  const itemLabel = option => option.label;
-
   return (
     <div
       className={style.Box + (isOpen ? " is--selected" : "")}
@@ -52,7 +50,7 @@ export default function Dropdown({
         >
           {options.map((option, i) => (
             <option value={i} key={i}>
-              {itemLabel(option)}
+              {option.label}
             </option>
           ))}
         </select>
