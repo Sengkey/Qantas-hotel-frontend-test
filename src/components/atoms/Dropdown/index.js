@@ -47,6 +47,7 @@ export default function Dropdown({
           className="dropdown__inner__select"
           id="dropdown-select-input"
           onChange={evt => select(evt.target.value)}
+          onBlur={(e) => setIsOpen(false)}
           value={ddSelectedIndex}
         >
           {options.map((option, i) => (
