@@ -41,7 +41,6 @@ function App() {
       <Loading isReady={isReady}/>
       <Header />
       <TallyTable data={data} />
-      
     </div>
   );
 }
