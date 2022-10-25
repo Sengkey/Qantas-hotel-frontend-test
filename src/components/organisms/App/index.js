@@ -8,7 +8,7 @@ function App() {
 
   const [data, setData] = useState([]);
 
-  const [isReady, seIsReady] = useState(false);
+  const [isReady, setIsReady] = useState(false);
 
   /*
   Change data using fetch, so then it can be incorporated with a preloader
@@ -28,7 +28,7 @@ function App() {
     .then(function (myJson) {
       // console.log(myJson);
       setData(myJson);
-      if(myJson.results && myJson.results.length > 0) seIsReady(true);
+      if(myJson.results && myJson.results.length > 0) setIsReady(true);
     });
   };
 
