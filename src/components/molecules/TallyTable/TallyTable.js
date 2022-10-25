@@ -1,10 +1,10 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import orderBy from "lodash/orderBy";
 import Dropdown from "../../atoms/Dropdown";
 import Rating from "../../atoms/Rating/Rating";
 
 import style from "./TallyTable.module.scss";
-import data from "./data.json";
 
 const sortPriceOptions = [
   { label: "Default", value: "" },
@@ -25,6 +25,11 @@ export default class TallyTable extends React.Component {
   };
 
   render() {
+
+    const { data } = this.props;
+
+    if(data.length <= 0) return null;
+
     const { sortType } = this.state;
     
     const { results } = data;
@@ -131,4 +136,11 @@ export default class TallyTable extends React.Component {
       </div>
     );
   }
+}
+
+TallyTable.propTypes = {
+  data: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object
+  ]).isRequired
 }

@@ -27,7 +27,7 @@ const Rating = ({ value, type, total }) => {
               key={"s"+i}
               className={style.Icon}
               viewBox="0 0 24 24"
-              title="star"
+              title="rateIcon"
               fill="currentColor"
               width="14"
               height="14"
@@ -39,7 +39,7 @@ const Rating = ({ value, type, total }) => {
             <svg
               className={style.Icon}
               viewBox="0 0 24 24"
-              title="starHalf"
+              title="rateIcon"
               fill="currentColor"
               width="14"
               height="14"
@@ -53,7 +53,7 @@ const Rating = ({ value, type, total }) => {
                 key={"r"+i}  
                 className={style.Icon}
                 viewBox="0 0 24 24"
-                title="starNone"
+                title="rateIcon"
                 fill="currentColor"
                 width="14"
                 height="14"
@@ -71,7 +71,7 @@ const Rating = ({ value, type, total }) => {
               key={"s"+i}  
               className={style.Icon}
               viewBox="0 0 24 24"
-              title="circle"
+              title="rateIcon"
               fill="currentColor"
               width="14"
               height="14"
@@ -83,7 +83,7 @@ const Rating = ({ value, type, total }) => {
             <svg
               className={style.Icon}
               viewBox="0 0 24 24"
-              title="circleHalf"
+              title="rateIcon"
               fill="currentColor"
               width="14"
               height="14"
@@ -97,7 +97,7 @@ const Rating = ({ value, type, total }) => {
                 key={"r"+i}  
                 className={style.Icon}
                 viewBox="0 0 24 24"
-                title="circleNone"
+                title="rateIcon"
                 fill="currentColor"
                 width="14"
                 height="14"
