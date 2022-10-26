@@ -38,17 +38,17 @@ export default class TallyTable extends React.Component {
 
     const processData = (type, arrayData) => {
       let res = [];
-      const isPriceType = sortType.split(" ")[1];
+      const orderType = sortType.split(" ")[1];
       if(type === "price desc" || type === "price desc") {
         res = orderBy(
           arrayData,
           ["offer.displayPrice.amount"],
-          [isPriceType])
+          [orderType])
       } else {
         res = orderBy(
           arrayData,
           ["property.rating.ratingValue"],
-          [isPriceType])
+          [orderType])
       }
       return sortType === "" ? arrayData : res
     }
