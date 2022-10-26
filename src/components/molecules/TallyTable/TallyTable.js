@@ -8,8 +8,10 @@ import style from "./TallyTable.module.scss";
 
 const sortPriceOptions = [
   { label: "Default", value: "" },
-  { label: "Price high-low", value: "desc" },
-  { label: "Price low-high", value: "asc" },
+  { label: "Price high-low", value: "price desc"},
+  { label: "Price low-high", value: "price asc"},
+  { label: "Rating high-low", value: "rating desc"},
+  { label: "Rating low-high", value: "rating asc"},
 ];
 
 export default class TallyTable extends React.Component {
@@ -33,12 +35,25 @@ export default class TallyTable extends React.Component {
     const { sortType } = this.state;
     
     const { results } = data;
-    
-    const sortedData = sortType !== "" ? orderBy(
-      results,
-      ["offer.displayPrice.amount"],
-      [sortType]
-    ) : results;
+
+    const processData = (type, arrayData) => {
+      let res = [];
+      const isPriceType = sortType.split(" ")[1];
+      if(type === "price desc" || type === "price desc") {
+        res = orderBy(
+          arrayData,
+          ["offer.displayPrice.amount"],
+          [isPriceType])
+      } else {
+        res = orderBy(
+          arrayData,
+          ["property.rating.ratingValue"],
+          [isPriceType])
+      }
+      return sortType === "" ? arrayData : res
+    }
+
+    const sortedData = sortType !== "" ? processData(sortType, results) : results;
 
     return (
       <div className={style.TallyTable}>

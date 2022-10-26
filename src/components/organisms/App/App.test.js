@@ -94,7 +94,7 @@ test('renders too big, and will be disappear after 300ms', async () => {
 /* Mocks */
 /*
 
-Replicate a simple static version of complex component inside __mocks__ folder. Hence everytime the test runs, it will using the simple static version. 
+Replicate a simpler static version of any complex component, place them inside __mocks__ folder. Hence everytime the test runs, it will use the simple static version instead.
 
 Never mock data via https//
 
